@@ -13,5 +13,10 @@ def get():
 def post():
     return Response(json.dumps({'Output': 'Hello World'}), mimetype='application/json', status=200)
 
+@application.route('/', methods=['POST'])
+def post():
+    return Response(json.dumps({'New Endpoint': 'Hello Vibhatha'}), mimetype='application/json', status=200)
+
+
 if __name__ == '__main__':
     flaskrun(application)
